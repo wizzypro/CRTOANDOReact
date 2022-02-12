@@ -1,12 +1,12 @@
 import React from "react";
 import Form from "./form/Form";
 
-let isLoggedIn = false;
+let isLoggedIn = true;
 
 function App() {
   return (
     <div className="container">
-      <Form className="form" valid={isLoggedIn} />
+      <Form className="form" isRegistered={isLoggedIn} />
     </div>
   );
 }

@@ -7,10 +7,10 @@ let Form = (props) => {
     <form className={props.className}>
       <Input type="text" placeHolder="Username" />
       <Input type="password" placeHolder="Password" />
-      {props.valid == false && (
+      {props.isRegistered == false && (
         <Input type="password" placeHolder="Confirm Password" />
       )}
-      <Button type="submit" value={props.valid ? "Login" : "Register"} />
+      <Button type="submit" value={props.isRegistered ? "Login" : "Register"} />
     </form>
   );
 };
