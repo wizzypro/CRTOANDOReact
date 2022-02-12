@@ -1,16 +1,18 @@
 import React from "react";
+import Form from "./form/Form";
+
+let isLoggedIn = true;
+
+let validator = (isLoggedIn) => {
+  if (isLoggedIn) {
+    return <h1>Hello</h1>;
+  } else {
+    return <Form className="form" />;
+  }
+};
 
 function App() {
-  return (
-    <div className="container">
-      <h1>Hello</h1>
-      <form className="form">
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  );
+  return <div className="container">{validator(isLoggedIn)}</div>;
 }
 
 export default App;
