@@ -3,16 +3,12 @@ import Form from "./form/Form";
 
 let isLoggedIn = true;
 
-let validator = (isLoggedIn) => {
-  if (isLoggedIn) {
-    return <h1>Hello</h1>;
-  } else {
-    return <Form className="form" />;
-  }
-};
-
 function App() {
-  return <div className="container">{validator(isLoggedIn)}</div>;
+  return (
+    <div className="container">
+      {isLoggedIn ? <Form className="form" /> : <h1>Hello</h1>}
+    </div>
+  );
 }
 
 export default App;
